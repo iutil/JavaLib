@@ -2,7 +2,7 @@ package com.iutil.javalib.util;
 
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
-import com.fengwenyi.javalib.constant.URL;
+import com.iutil.javalib.constant.URL;
 import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;

@@ -1,6 +1,6 @@
 package com.iutil.javalib.util;
 
-import com.fengwenyi.javalib.constant.EncryptionType;
+import com.iutil.javalib.constant.EncryptionType;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
