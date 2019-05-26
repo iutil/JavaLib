@@ -8,17 +8,20 @@ import java.time.LocalTime;
  * @author Erwin Feng
  * @since 2019-05-22 22:34
  */
-public class Print {
+public class PrintUtils {
 
     /** 打印开关，默认开启 */
     public static boolean DEBUG = true;
 
+    /**
+     * 控制台打印INFO日志
+     * 如果不想输出，可通过 [DEBUG] 关闭
+     * @param x 待打印
+     */
     public static void info(Object x) {
         if (DEBUG) {
-            System.out.println(
-                    LocalDate.now() + " " + LocalTime.now()
-                            + " PRINT " + Print.class.getName()
-                            + " : " + x);
+            String str = String.format("[%s %s] %s", LocalDate.now(), LocalTime.now(), x);
+            System.out.println(str);
         }
     }
 

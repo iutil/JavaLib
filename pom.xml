@@ -6,7 +6,7 @@
 
     <groupId>net.iutil</groupId>
     <artifactId>JavaLib</artifactId>
-    <version>1.0.BUILD</version>
+    <version>1.0.0.BUILD</version>
     <build>
         <plugins>
             <plugin>

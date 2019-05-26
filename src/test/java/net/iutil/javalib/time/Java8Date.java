@@ -1,5 +1,6 @@
 package net.iutil.javalib.time;
 
+import net.iutil.javalib.util.PrintUtils;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -15,7 +16,7 @@ public class Java8Date {
     public void simple() {
         // 获取今天的日期
         LocalDate dayDate = LocalDate.now();
-        System.out.println(dayDate); // 2019-05-22
+        PrintUtils.info(dayDate); // 2019-05-22
     }
 
 }

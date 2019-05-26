@@ -1,6 +1,6 @@
 package net.iutil.javalib.time;
 
-import net.iutil.javalib.util.Print;
+import net.iutil.javalib.util.PrintUtils;
 import org.junit.Test;
 
 import java.time.LocalDate;
@@ -14,9 +14,9 @@ public class Format {
 
     @Test
     public void test() {
-        Print.DEBUG = true;
+        PrintUtils.DEBUG = true;
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("YYYY MM dd");
-        Print.info(formatter.format(LocalDate.now()));
+        PrintUtils.info(formatter.format(LocalDate.now()));
     }
 
 }

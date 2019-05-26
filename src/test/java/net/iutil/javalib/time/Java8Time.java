@@ -1,9 +1,8 @@
 package net.iutil.javalib.time;
 
-import net.iutil.javalib.util.Print;
+import net.iutil.javalib.util.PrintUtils;
 import org.junit.Test;
 
-import java.time.LocalDate;
 import java.time.LocalTime;
 
 /**
@@ -37,15 +36,15 @@ public class Java8Time {
     @Test
     public void simple() {
 
-        Print.DEBUG = true;
+        PrintUtils.DEBUG = true;
 
         // 获取现在的时间
         LocalTime nowTime = LocalTime.now();
-        Print.info(nowTime); // 22:30:26.816
+        PrintUtils.info(nowTime); // 22:30:26.816
 
         // 咦，怎么会有毫秒，不显示
         LocalTime nowTime2 = LocalTime.now().withNano(0);
-        Print.info(nowTime2); // 22:48:30
+        PrintUtils.info(nowTime2); // 22:48:30
     }
 
 
