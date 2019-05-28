@@ -2,6 +2,8 @@ package net.iutil.javalib.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
+import java.time.Instant;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -499,6 +501,60 @@ public class DateTimeUtil {
         }
         return msg;
 
+    }
+
+    /**
+     * 计算两个时间点相差多少毫秒
+     * @param start 开始时间点（Instant）
+     * @param end   结束时间点（Instant）
+     * @return 相差毫秒数(long)
+     */
+    public static long differMillis(Instant start, Instant end) {
+        return Duration.between(start, end).toMillis();
+    }
+
+    /**
+     * 计算两个时间点相差多少秒
+     * 注意，返回只保留整数部分
+     * @param start 开始时间点（Instant）
+     * @param end   结束时间点（Instant）
+     * @return 相差秒数(long)
+     */
+    public static long differSeconds(Instant start, Instant end) {
+        return Duration.between(start, end).getSeconds();
+    }
+
+    /**
+     * 计算两个时间点相差多少分钟
+     * 注意，返回只保留整数部分
+     * @param start 开始时间点（Instant）
+     * @param end   结束时间点（Instant）
+     * @return 相差分钟数(long)
+     */
+    public static long differMinutes(Instant start, Instant end) {
+        return Duration.between(start, end).toMinutes();
+    }
+
+    /**
+     * 计算两个时间点相差多少小时
+     * 注意，返回只保留整数部分
+     * @param start 开始时间点（Instant）
+     * @param end   结束时间点（Instant）
+     * @return 相差小时数(long)
+     */
+    public static long differHours(Instant start, Instant end) {
+        return Duration.between(start, end).toHours();
+    }
+
+    /**
+     * 计算两个时间点相差多少天
+     * 注意，返回只保留整数部分
+     * @param start 开始时间点（Instant）
+     * @param end   结束时间点（Instant）
+     * @return 相差天数(long)
+     */
+    public static long differDays(Instant start, Instant end) {
+        return Duration.between(start, end).toDays();
     }
 
 }
