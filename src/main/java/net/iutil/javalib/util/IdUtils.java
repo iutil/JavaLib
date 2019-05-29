@@ -6,7 +6,7 @@ import java.util.UUID;
  * @author Wenyi Feng
  * @since 2018-10-28
  */
-public class IdUtil {
+public class IdUtils {
 
     /**
      * 不含"-"

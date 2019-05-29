@@ -4,6 +4,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -26,7 +29,7 @@ import java.util.Date;
  * @see java.time.ZonedDateTime
  * java 8 time end
  */
-public class DateTimeUtil {
+public class DateTimeUtils {
 
     /** 设定周日为一周的开始 */
     private static final int FIRST_DAY_OF_WEEK = Calendar.SUNDAY;
@@ -555,6 +558,17 @@ public class DateTimeUtil {
      */
     public static long differDays(Instant start, Instant end) {
         return Duration.between(start, end).toDays();
+    }
+
+    /**
+     * 时间点格式化
+     * @param instant 时间点（Instant）
+     * @param format 格式（String）
+     * @return 字符串时间格式
+     */
+    public static String format(Instant instant, String format) {
+        LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
+        return localDateTime.format(DateTimeFormatter.ofPattern(format));
     }
 
 }
