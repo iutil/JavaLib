@@ -57,7 +57,7 @@ public class AESUtils {
             byte[] byteContent = content.getBytes("utf-8");
             cipher.init(Cipher.ENCRYPT_MODE, key);// 初始化为加密模式的密码器
             byte[] result = cipher.doFinal(byteContent);// 加密
-            return ParseSystemUtils.parseByte2HexStr(result);
+            return HexUtils._2_16(result);
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         } catch (InvalidKeyException e) {
@@ -80,7 +80,7 @@ public class AESUtils {
         try {
             Common(password);
             cipher.init(Cipher.DECRYPT_MODE, key);// 初始化为解密模式的密码器
-            byte[] result = cipher.doFinal(ParseSystemUtils.parseHexStr2Byte(content));
+            byte[] result = cipher.doFinal(HexUtils._16_2(content));
             return new String(result); // 明文
         } catch (InvalidKeyException e) {
             e.printStackTrace();
@@ -90,18 +90,6 @@ public class AESUtils {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        String content = "123456";
-        String password = "jsdz1234";
-        System.out.println("加密之前：" + content);
-        // 加密
-        String encrypt = AESUtils.encrypt(content, password);
-        System.out.println("加密后的内容：" + encrypt);
-        // 解密
-        String decrypt = AESUtils.decrypt(encrypt, password);
-        System.out.println("解密后的内容：" + decrypt);
     }
 
 }
