@@ -43,11 +43,11 @@ JavaLib，是一个Java开发基础工具类库，对项目开发中常用的工
 
 ```xml
     <repositories>
-		<repository>
-		    <id>jitpack.io</id>
-		    <url>https://jitpack.io</url>
-		</repository>
-	</repositories>
+        <repository>
+            <id>jitpack.io</id>
+            <url>https://jitpack.io</url>
+        </repository>
+    </repositories>
 ```
 
 第二步，添加依赖：

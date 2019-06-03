@@ -9,7 +9,7 @@ package net.iutil.javalib.util;
  * @author Wenyi Feng
  * @since 2018-08-27
  */
-public class ExceptionUtil {
+public class ExceptionUtils {
 
     /**
      * 校验参数是否为空，如果不为空，将抛出异常
