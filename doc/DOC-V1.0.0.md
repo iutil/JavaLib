@@ -25,3 +25,15 @@
 `getIdByUUID()`：通过UUID生成Id，无`-`
 
 `getUUID()`：UUID，有`-`
+
+#### AES加密/解密工具类(AESUtils)
+
+`String encrypt(String content, String password)`：加密方法，参数为加密内容和密码，返回类型：String
+
+`String decrypt(String content, String password)`：解密方法，参数为解密内容和密码，返回类型：String
+
+#### 二进制和十六进制转换工具类(ParseSystemUtils)
+
+`String parseByte2HexStr(byte buf[])`：二进制转十六进制方法，参数为二进制数组，返回类型：String
+
+`byte[] parseHexStr2Byte(String hexStr)`：十六进制转二进制方法，参数为十六进制字符串，返回类型：二进制数组
