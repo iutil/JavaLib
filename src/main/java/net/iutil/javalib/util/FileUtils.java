@@ -7,7 +7,7 @@ import java.io.*;
  * @author Wenyi Feng
  */
 
-public class FileUtil {
+public class FileUtils {
 
     /**
      * 将字符串写入到文件中

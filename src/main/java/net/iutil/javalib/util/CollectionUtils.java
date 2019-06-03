@@ -3,11 +3,11 @@ package net.iutil.javalib.util;
 import java.util.Collection;
 
 /**
- * 集合操作工具类
+ * 集合工具类
  * @author Wenyi Feng
  * @since 2018-10-15
  */
-public class CollectionUtil {
+public class CollectionUtils {
 
     /**
      * 如果集合为{@code null}或者空，则返回{@code true}。

@@ -12,7 +12,7 @@ import java.net.UnknownHostException;
  * 你可能想从{@link HttpServletRequest}获取一些信息
  * @author Wenyi Feng
  */
-public class RequestUtil {
+public class RequestUtils {
 
     // 获取客户端IP地址(不被使用，仅做参考)
     private String getRequestIpOnly(HttpServletRequest request) {

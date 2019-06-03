@@ -12,7 +12,7 @@ import java.util.Map;
  * @author Wenyi Feng
  * @since 2018-10-28
  */
-public class ParamUtil {
+public class ParamUtils {
 
     /**
      * 将Map型转为请求参数型

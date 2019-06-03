@@ -10,7 +10,7 @@ import java.security.NoSuchAlgorithmException;
  * @author Wenyi Feng
  * @since 2018-10-28
  */
-public class SHAUtil {
+public class SHAUtils {
 
     /**
      * 字符串 SHA 加密

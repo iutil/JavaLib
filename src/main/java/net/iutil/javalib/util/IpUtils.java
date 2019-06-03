@@ -14,7 +14,7 @@ import java.io.IOException;
  * @author Wenyi Feng
  * @since 2018-10-28
  */
-public class IpUtil {
+public class IpUtils {
 
     /**
      * 请求佯装KEY

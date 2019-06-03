@@ -5,5 +5,5 @@ package net.iutil.javalib.util;
  * @author Wenyi Feng
  * @since 2018-11-13
  */
-public class PatternUtil {
+public class PatternUtils {
 }

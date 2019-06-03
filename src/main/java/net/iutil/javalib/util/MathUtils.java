@@ -6,7 +6,7 @@ import java.util.Random;
  * 数学工具类
  * @author Wenyi Feng
  */
-public class MathUtil {
+public class MathUtils {
 
     /**
      * 在[0, range)范围内产生一个随机数

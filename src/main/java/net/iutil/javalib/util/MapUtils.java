@@ -11,7 +11,7 @@ import java.util.Map;
  * @author Wenyi Feng
  * @since 2018-11-17
  */
-public class MapUtil {
+public class MapUtils {
 
     /**
      * 判断Map是否为空

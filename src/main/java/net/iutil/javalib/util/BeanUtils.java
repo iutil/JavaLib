@@ -1,11 +1,11 @@
 package net.iutil.javalib.util;
 
 /**
- * BeanUtil
+ * Bean工具类
  * @author Wenyi Feng
  * @since 2018-10-15
  */
-public class BeanUtil {
+public class BeanUtils {
 
     // 拷贝bean相同名称类型的属性（不包含父类）
 
