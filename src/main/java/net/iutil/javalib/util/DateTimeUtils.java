@@ -35,13 +35,13 @@ public class DateTimeUtils {
     private static final int FIRST_DAY_OF_WEEK = Calendar.SUNDAY;
 
     /**
-     * 时间字符串转时间类型({@link Date})
+     * 将时间字符串解析成时间类型({@link Date})
      * @param source 时间字符串（需要满足指定格式）
      * @param format 指定格式
      * @return 时间类型({@link java.util.Date})
-     * @throws ParseException 格式化出错
+     * @throws ParseException 解析出错
      */
-    public static Date stringToDate(String source, String format) throws ParseException {
+    public static Date parse(String source, String format) throws ParseException {
 
         if (StringUtils.isEmpty(source))
             return null;
@@ -62,12 +62,12 @@ public class DateTimeUtils {
     }
 
     /**
-     * 时间({@link Date})转时间字符串
+     * 时间({@link Date})格式化成时间字符串
      * @param source 时间类型({@link Date}) or 秒数/毫秒数({@link Long})
      * @param format 指定格式
      * @return 满足指定格式的时间字符串
      */
-    public static String toString(Object source, String format) {
+    public static String format(Object source, String format) {
 
         if (source == null)
             return null;
@@ -469,7 +469,7 @@ public class DateTimeUtils {
      * @param source 时间({@link Date})
      * @return 自然语言描述过去的时间
      */
-    public static String getTimePassedLong(Date source) {
+    public static String descPastTime(Date source) {
 
         if (source == null)
             return null;

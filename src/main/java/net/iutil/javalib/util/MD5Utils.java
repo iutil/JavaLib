@@ -18,7 +18,7 @@ public class MD5Utils {
      * @return MD5加密之后的字符串，32位小写
      * @throws NoSuchAlgorithmException 算法失败
      */
-    public static String MD5(String plainText) throws NoSuchAlgorithmException {
+    public static String md5(String plainText) throws NoSuchAlgorithmException {
         // 创建一个md5算法对象
         MessageDigest md = MessageDigest.getInstance(EncryptionType.MD5);
         byte[] messageByte = plainText.getBytes();
@@ -46,7 +46,7 @@ public class MD5Utils {
      * @param str 待加密字符串/加密后的字符串
      * @return 加密后的字符串/解密后的字符串
      */
-    public static String convertMD5(String str){
+    public static String convert(String str) {
 
         char[] a = str.toCharArray();
         for (int i = 0; i < a.length; i++){

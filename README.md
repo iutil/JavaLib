@@ -22,8 +22,8 @@
 	<a target="_blank" href="https://travis-ci.org/looly/hutool">
 		<img src="https://travis-ci.org/looly/hutool.svg?branch=v4-master" ></img>
 	</a>
-	<a target="_blank" href='https://github.com/iutil/app-boot-starter'>
-		<img src="https://img.shields.io/github/stars/iutil/app-boot-starter.svg?style=social" alt="github star"></img>
+	<a target="_blank" href='https://github.com/iutil/JavaLib'>
+		<img src="https://img.shields.io/github/stars/iutil/JavaLib.svg?style=social" alt="github star"></img>
 	</a>
 </p>
 
@@ -56,13 +56,13 @@ JavaLib，是一个Java开发基础工具类库，对项目开发中常用的工
 	<dependency>
 	    <groupId>com.github.iutil</groupId>
 	    <artifactId>JavaLib</artifactId>
-	    <version>1.0.0.BUILD</version>
+	    <version>1.0.1</version>
 	</dependency>
 ```
 
 ## Wiki
 
-[V1.0.0.BUILD文档](./doc/DOC-V1.0.0.md)
+[V1.0.1.BUILD文档](doc/DOC-V1.0.1.md)
 
 ## 版本标识说明
 

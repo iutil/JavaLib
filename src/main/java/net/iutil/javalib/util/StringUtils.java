@@ -125,4 +125,18 @@ public class StringUtils {
         return pattern.matcher(str).matches();
     }
 
+    /**
+     * 获取随机字符串
+     * @return 随机字符串
+     */
+    public static String getRandomString(int length) {
+        StringBuilder result = new StringBuilder();
+        char[] str = "0123456789abcdefghijkmlnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ".toCharArray();
+        for (int i = 0; i < length; i++) {
+            int index = (int) (Math.random() * str.length);
+            result.append(str[index]);
+        }
+        return result.toString();
+    }
+
 }
