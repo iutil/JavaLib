@@ -213,7 +213,8 @@ public class RSAUtils {
             signTool.update(content.getBytes(charset));
         }
         byte[] signBytes = signTool.sign();
-        return Base64.byteArrayToAltBase64(signBytes);
+        //二进制转十六进制
+        return HexUtils._2_16(signBytes);
     }
 
     /**
@@ -241,6 +242,7 @@ public class RSAUtils {
         } else {
             signTool.update(content.getBytes(charset));
         }
-        return signTool.verify(Base64.altBase64ToByteArray(signature));
+        //十六进制转二进制
+        return signTool.verify(HexUtils._16_2(signature));
     }
 }
