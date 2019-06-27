@@ -136,6 +136,7 @@
 
 `boolean hasOnlyNum(String str)`: 字符串中只有数字。如果只含有数字，则返回true，反之，返回false.
 
+`String getRandomString(int length)`：获取随机字符串
 ## HTTP网络请求工具类(HttpUtils)
 
 `String get(String url)`: get请求
