@@ -7,8 +7,13 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import org.lionsoul.ip2region.*;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 /**
  * @author Wenyi Feng
@@ -81,6 +86,37 @@ public class IpUtils {
         Call call = okHttpClient.newCall(request);
         Response response = call.execute();
         return response.body() == null ? "" : response.body().string();
+    }
+
+    // 有问题  还在测试
+    public static String getCityInfo(int algorithm, String ip) throws
+            DbMakerConfigException,
+            FileNotFoundException,
+            NoSuchMethodException,
+            InvocationTargetException,
+            IllegalAccessException {
+        String dbPath = IpUtils.class.getResource("ip2region.db").getPath(); // null
+            PrintUtils.info(dbPath);
+            File file = new File(dbPath);
+            DbConfig config = new DbConfig();
+            DbSearcher searcher = new DbSearcher(config, file.getPath());
+            Method method;
+            switch (algorithm) {
+                case DbSearcher.BTREE_ALGORITHM:
+                    method = searcher.getClass().getMethod("btreeSearch", String.class);
+                    break;
+                case DbSearcher.BINARY_ALGORITHM:
+                    method = searcher.getClass().getMethod("binarySearch", String.class);
+                    break;
+                default:
+                    method = searcher.getClass().getMethod("memorySearch", String.class);
+                    break;
+            }
+            if (!Util.isIpAddress(ip)) {
+                throw new IllegalArgumentException("Invalid ip address");
+            }
+            DataBlock dataBlock = (DataBlock) method.invoke(searcher, ip);
+            return dataBlock.getRegion();
     }
 
 }
