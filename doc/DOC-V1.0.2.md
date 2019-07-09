@@ -66,6 +66,8 @@
 
 `String format(Instant instant, String format)`: 时间点格式化
 
+`Instant parseDate(String source)`: 日期字符串转化为Instant
+
 ## 进制转换工具类(HexUtils)
 
 `String _2_16(byte[] bytes)`: 二进制转十六进制
@@ -137,6 +139,7 @@
 `boolean hasOnlyNum(String str)`: 字符串中只有数字。如果只含有数字，则返回true，反之，返回false.
 
 `String getRandomString(int length)`：获取随机字符串
+
 ## HTTP网络请求工具类(HttpUtils)
 
 `String get(String url)`: get请求

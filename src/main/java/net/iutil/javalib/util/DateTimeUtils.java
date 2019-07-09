@@ -2,10 +2,7 @@ package net.iutil.javalib.util;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.Duration;
-import java.time.Instant;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
+import java.time.*;
 import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
@@ -569,6 +566,17 @@ public class DateTimeUtils {
     public static String format(Instant instant, String format) {
         LocalDateTime localDateTime = LocalDateTime.ofInstant(instant, ZoneId.systemDefault());
         return localDateTime.format(DateTimeFormatter.ofPattern(format));
+    }
+
+    /**
+     *将日期字符串(形如 {@code 2019-07-09} )转为 Instant，结果：{@code 2019-07-08T16:00:00Z}
+     *
+     * @param source 日期字符串，如 {@code 2019-07-09}
+     * @return Instant {@code 2019-07-08T16:00:00Z}
+     */
+    public static Instant parseDate(String source) {
+        LocalDate date = LocalDate.parse(source);
+        return date.atStartOfDay(ZoneId.systemDefault()).toInstant();
     }
 
 }
