@@ -19,9 +19,6 @@
 	<a target="_blank" href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">
 		<img src="https://img.shields.io/badge/JDK-1.8+-green.svg" ></img>
 	</a>
-	<a target="_blank" href="https://travis-ci.org/looly/hutool">
-		<img src="https://travis-ci.org/looly/hutool.svg?branch=v4-master" ></img>
-	</a>
 	<a target="_blank" href='https://github.com/iutil/JavaLib'>
 		<img src="https://img.shields.io/github/stars/iutil/JavaLib.svg?style=social" alt="github star"></img>
 	</a>
