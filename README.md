@@ -62,7 +62,7 @@ JavaLib，是一个Java开发基础工具类库，对项目开发中常用的工
 
 ## Wiki
 
-[V1.0.1.BUILD文档](doc/DOC-V1.0.1.md)
+[中文文档](https://github.com/iutil/JavaLib/wiki)
 
 ## 版本标识说明
 
