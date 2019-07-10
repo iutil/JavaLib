@@ -7,13 +7,10 @@ import okhttp3.Call;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import org.lionsoul.ip2region.*;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.lang.reflect.InvocationTargetException;
-import java.lang.reflect.Method;
+
+//import org.lionsoul.ip2region.*;
 
 /**
  * @author Wenyi Feng
@@ -89,7 +86,7 @@ public class IpUtils {
     }
 
     // 有问题  还在测试
-    public static String getCityInfo(int algorithm, String ip) throws
+    /*public static String getCityInfo(int algorithm, String ip) throws
             DbMakerConfigException,
             FileNotFoundException,
             NoSuchMethodException,
@@ -117,6 +114,6 @@ public class IpUtils {
             }
             DataBlock dataBlock = (DataBlock) method.invoke(searcher, ip);
             return dataBlock.getRegion();
-    }
+    }*/
 
 }

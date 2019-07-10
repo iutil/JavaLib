@@ -28,23 +28,4 @@ public class FileUtils {
         out.close();
     }
 
-    /**
-     * 根据文件路径读取文件内容
-     * [仅做参考]
-     * @param path 文件路径
-     * @return 文件内容
-     * @throws IOException 读取失败
-     */
-    private String read(String path) throws IOException {
-        StringBuffer sb = new StringBuffer();
-        String tempStr;
-        File file = new File(path);
-        // 如果文件不存在，读取失败
-        if (!file.exists()) throw new FileNotFoundException();
-        FileInputStream fis = new FileInputStream(file);
-        BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-        while ((tempStr = br.readLine()) != null) sb.append(tempStr);
-        return sb.toString();
-    }
-
 }

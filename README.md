@@ -42,22 +42,22 @@ JavaLib，是一个Java开发基础工具类库，对项目开发中常用的工
 第一步，添加远程仓库：
 
 ```xml
-    <repositories>
-        <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-    </repositories>
+<repositories>
+    <repository>
+        <id>jitpack.io</id>
+        <url>https://jitpack.io</url>
+    </repository>
+</repositories>
 ```
 
 第二步，添加依赖：
 
 ```xml
-	<dependency>
-	    <groupId>com.github.iutil</groupId>
-	    <artifactId>JavaLib</artifactId>
-	    <version>1.0.1</version>
-	</dependency>
+<dependency>
+    <groupId>com.github.iutil</groupId>
+    <artifactId>JavaLib</artifactId>
+    <version>1.0.2</version>
+</dependency>
 ```
 
 ## Wiki

@@ -19,4 +19,18 @@ public class DateTimeUtilsTest {
         PrintUtils.info(format);
     }
 
+    @Test
+    public void date2Instant() {
+        String date = "2019-07-09";
+        Instant instant = DateTimeUtils.parseDate(date);
+        PrintUtils.info(instant);
+    }
+
+    @Test
+    public void dateTime2Instant() {
+        String dateTime = "2019-07-09 18:00:00";
+        Instant instant = DateTimeUtils.parseDateTime(dateTime, "yyyy-MM-dd HH:mm:ss");
+        PrintUtils.info(instant);
+    }
+
 }

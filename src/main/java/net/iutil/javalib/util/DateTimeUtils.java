@@ -579,4 +579,16 @@ public class DateTimeUtils {
         return date.atStartOfDay(ZoneId.systemDefault()).toInstant();
     }
 
+    /**
+     * 将 时间字符串 转为 Instant
+     * @param source 时间字符串
+     * @param format 格式
+     * @return Instant
+     */
+    public static Instant parseDateTime(String source, String format) {
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern(format);
+        LocalDateTime dateTime = LocalDateTime.parse(source, dateTimeFormatter);
+        return dateTime.atZone(ZoneOffset.systemDefault()).toInstant();
+    }
+
 }

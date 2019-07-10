@@ -3,7 +3,7 @@ package net.iutil.javalib;
 import net.iutil.javalib.util.IpUtils;
 import net.iutil.javalib.util.PrintUtils;
 import org.junit.Test;
-import org.lionsoul.ip2region.DbMakerConfigException;
+//import org.lionsoul.ip2region.DbMakerConfigException;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -27,8 +27,8 @@ public class IpUtilsTests {
 
             PrintUtils.info(fileName);
 
-            String city = IpUtils.getCityInfo(0, "218.88.94.192");
-            PrintUtils.info(city);
+//            String city = IpUtils.getCityInfo(0, "218.88.94.192");
+//            PrintUtils.info(city);
         } catch (Exception e) {
             e.printStackTrace();
         }

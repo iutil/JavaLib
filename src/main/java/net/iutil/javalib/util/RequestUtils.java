@@ -86,6 +86,7 @@ public class RequestUtils {
             sb.append(line);
         }
         //return URLDecoder.decode(sb.toString(), Constant.DEFAULT_CHATSET);
+        br.close();
         return sb.toString();
     }
 }

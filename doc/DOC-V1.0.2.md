@@ -68,6 +68,8 @@
 
 `Instant parseDate(String source)`: 日期字符串转化为Instant
 
+`Instant parseDateTime(String source, String format)`: 将 时间字符串 转为 Instant
+
 ## 进制转换工具类(HexUtils)
 
 `String _2_16(byte[] bytes)`: 二进制转十六进制
