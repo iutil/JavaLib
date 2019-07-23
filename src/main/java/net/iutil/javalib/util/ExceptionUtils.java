@@ -46,7 +46,7 @@ public class ExceptionUtils {
      * (@see org.springframework.util.Assert#isNull)
      */
     public static void isNull(Object object) {
-        isNull(object, "Param must null.");
+        isNull(object, "Param must be null");
     }
 
     /**
@@ -55,7 +55,30 @@ public class ExceptionUtils {
      * (@see org.springframework.util.Assert#isNull)
      */
     public static void notNull(Object object) {
-        notNull(object, "Param must not null.");
+        notNull(object, "Param must not be null");
+    }
+
+    /**
+     * 获得完整消息，包括异常名
+     *
+     * @param e 异常
+     * @return 完整消息
+     */
+    public static String getMessage(Throwable e) {
+        if (null == e) {
+            return StringUtils.NULL;
+        }
+        return StrUtil.format("{}: {}", e.getClass().getSimpleName(), e.getMessage());
+    }
+
+    /**
+     * 获得消息，调用异常类的getMessage方法
+     *
+     * @param e 异常
+     * @return 消息
+     */
+    public static String getSimpleMessage(Throwable e) {
+        return (null == e) ? StringUtils.NULL : e.getMessage();
     }
 
 }

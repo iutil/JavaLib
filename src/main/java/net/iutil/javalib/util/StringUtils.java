@@ -12,6 +12,9 @@ import java.util.regex.Pattern;
  */
 public class StringUtils {
 
+    /** 定义空字符串 */
+    public static final String NULL = "null";
+
     /**
      * 判断字符串是否为空
      * @param str 待判断的字符串
