@@ -25,7 +25,7 @@
         <!-- lombok版本 -->
         <lombok.version>1.18.2</lombok.version>
         <!-- fastjson版本 -->
-        <fastjson.version>1.2.56</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <!-- jackson版本 -->
         <jackson.annotations.version>2.9.8</jackson.annotations.version>
         <!-- okhttp3版本 -->
